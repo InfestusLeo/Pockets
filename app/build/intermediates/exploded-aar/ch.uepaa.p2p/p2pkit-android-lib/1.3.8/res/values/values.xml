@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="p2pservices_min_compatible_version">66</integer>
+    <string name="app_name">Peer-2-Peer Kit</string>
+    <string name="p2p_kit_internal_dismiss">Dismiss</string>
+    <string name="p2p_kit_internal_install">Go to Play Store</string>
+    <string name="p2p_kit_internal_library_update_required_text">%1$s is using P2P Services for its proximity features and it\'s no longer compatible. Please check if %2$s has a new update available.</string>
+    <string name="p2p_kit_internal_library_update_required_title">@string/p2p_kit_internal_service_not_installed_title</string>
+    <string name="p2p_kit_internal_ok">OK</string>
+    <string name="p2p_kit_internal_own_app_name">Peer-2-Peer Kit</string>
+    <string name="p2p_kit_internal_service_disabled_text">%1$s requires P2P Services for its proximity features to work properly. To fix this issue please enable P2P Services in the settings.</string>
+    <string name="p2p_kit_internal_service_disabled_title">@string/p2p_kit_internal_service_not_installed_title</string>
+    <string name="p2p_kit_internal_service_error_text">%1$s is using P2P Services for its proximity features, which could not be loaded. Please contact the developer of %2$s.</string>
+    <string name="p2p_kit_internal_service_error_title">@string/p2p_kit_internal_service_not_installed_title</string>
+    <string name="p2p_kit_internal_service_not_installed_text">%1$s requires P2P Services for its proximity features to work properly. To fix this issue please install P2P Services from the Play Store.</string>
+    <string name="p2p_kit_internal_service_not_installed_title">%1$s may not be working properly</string>
+    <string name="p2p_kit_internal_service_update_required_text">%1$s requires P2P Services for its proximity features to work properly. To fix this issue please update P2P Services to its latest version.</string>
+    <string name="p2p_kit_internal_service_update_required_title">@string/p2p_kit_internal_service_not_installed_title</string>
+    <string name="p2p_kit_internal_this_app">This app</string>
+    <string name="p2p_kit_internal_this_app_lower_case">this app</string>
+    <string name="p2p_kit_internal_update_library">@string/p2p_kit_internal_install</string>
+    <string name="p2p_kit_internal_update_service">@string/p2p_kit_internal_install</string>
+</resources>
