@@ -235,27 +235,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             @Override
             public void onMessageReceived(long timestamp, UUID origin, String type, byte[] message){
-                try {
                     String oldmsg="";
-                    ciphers c = new ciphers();
-                    String plain = c.RSADecrypt(message);
+                    try {
+                        rc2 r = new rc2();
+                        byte[] decrypted = r.process(message,"-d");
+                        String plain = new String(decrypted);
+                        Toast.makeText(mContext, origin + ":\nemessage=" + new String(message), Toast.LENGTH_LONG).show();
+                    }catch(Exception java){
+                        Toast.makeText(mContext, "Error while decrypting the cipher text", Toast.LENGTH_LONG).show();
+                    }
+
+                    //String plain = new String(decrypted);
+                    //ciphers c = new ciphers();
+                    //String plain = c.RSADecrypt(message);
                     //String cipherText = new String(message);
                     //String plainText = ciphers.RSADecrypt(message);
                     //receiver = (EditText) findViewById(R.id.sendTo);
-                    if(!oldmsg.equals(new String(message)))
-                        Toast.makeText(mContext, origin + ":\nemessage=" + plain, Toast.LENGTH_SHORT).show();
-                    oldmsg=new String(message);
+                    //(!oldmsg.equals(plain))
+                    //Toast.makeText(mContext, origin + ":\nemessage=" + new String(message), Toast.LENGTH_LONG).show();
+                    //oldmsg=plain;
 
                     //needs testing
-                    UUID sender = P2PKitClient.getInstance(mContext).getNodeId();
+                    //UUID sender = P2PKitClient.getInstance(mContext).getNodeId();
 
                     //relaying the received message to other nodes
-                    P2PKitClient.getInstance(mContext).getMessageServices().sendMessage(origin, "text/plain", message);
-                }catch(MessageTooLargeException e){
-                    e.printStackTrace();
-                }catch (Exception e){
-                    e.printStackTrace();
-                }
+                    //P2PKitClient.getInstance(mContext).getMessageServices().sendMessage(sender, "text/plain", message
             }
         };
         P2PKitClient.getInstance(mContext).getMessageServices().addMessageListener(mMessageListener);
@@ -264,16 +268,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void sendMessage(UUID nodeId){
         try {
             ciphers c = new ciphers();
+            rc2 r=new rc2();
             msg= (EditText) findViewById(R.id.message);
             String input= msg.getText().toString();
+            byte[] plainText = input.getBytes();
+            byte[] cipherText = r.process(plainText,"-e");
             //byte[] toEncrypt=input.getBytes();
 
-            byte[] encrypted = c.RSAEncrypt(input);
-            String toSend = new String (encrypted);
+            //encrypting usnig RSA
+            //byte[] encrypted = c.RSAEncrypt(input);
+            //String toSend = new String (encrypted);
 
             //String cipherText = rc2.encrypt(input,"password");
 
-            P2PKitClient.getInstance(mContext).getMessageServices().sendMessage(nodeId, "text/plain", toSend.getBytes());
+            P2PKitClient.getInstance(mContext).getMessageServices().sendMessage(nodeId, "text/plain", cipherText);
             Toast.makeText(mContext, "Sending message to " + String.valueOf(nodeId), Toast.LENGTH_SHORT).show();
 
         } catch (MessageTooLargeException e) {
