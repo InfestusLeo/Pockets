@@ -1,6 +1,10 @@
 [
     {
-        "merged": "F:\\P2PDiscovery-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_launcher.png",
-        "source": "F:\\P2PDiscovery-master\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/F:\\P2PDiscovery-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_launcher.png",
+        "source": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/F:\\P2PDiscovery-master\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/ic_launcher.png",
+        "source": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     }
 ]

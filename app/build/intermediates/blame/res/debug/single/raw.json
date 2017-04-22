@@ -1,6 +1,10 @@
 [
     {
-        "merged": "F:\\P2PDiscovery-master\\app\\build\\intermediates\\res\\merged\\debug\\raw\\terms_of_service_and_license_agreement.pdf",
-        "source": "F:\\P2PDiscovery-master\\app\\build\\intermediates\\exploded-aar\\ch.uepaa.p2p\\p2pkit-android\\1.3.8\\res\\raw\\terms_of_service_and_license_agreement.pdf"
+        "merged": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/F:\\P2PDiscovery-master\\app\\build\\intermediates\\res\\merged\\debug\\raw\\terms_of_service_and_license_agreement.pdf",
+        "source": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/F:\\P2PDiscovery-master\\app\\build\\intermediates\\exploded-aar\\ch.uepaa.p2p\\p2pkit-android\\1.3.8\\res\\raw\\terms_of_service_and_license_agreement.pdf"
+    },
+    {
+        "merged": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/app/build/intermediates/res/merged/debug/raw/terms_of_service_and_license_agreement.pdf",
+        "source": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/app/build/intermediates/exploded-aar/ch.uepaa.p2p/p2pkit-android/1.3.8/res/raw/terms_of_service_and_license_agreement.pdf"
     }
 ]

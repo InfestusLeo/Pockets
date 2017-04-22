@@ -1,10 +1,18 @@
 [
     {
-        "merged": "F:\\P2PDiscovery-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
-        "source": "F:\\P2PDiscovery-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
+        "merged": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/F:\\P2PDiscovery-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/F:\\P2PDiscovery-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
     },
     {
-        "merged": "F:\\P2PDiscovery-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
-        "source": "F:\\P2PDiscovery-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
+        "merged": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/F:\\P2PDiscovery-master\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
+        "source": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/F:\\P2PDiscovery-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
     }
 ]

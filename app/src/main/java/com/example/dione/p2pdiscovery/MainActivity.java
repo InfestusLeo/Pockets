@@ -1,15 +1,22 @@
 package com.example.dione.p2pdiscovery;
 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.net.wifi.WifiManager;
 import android.net.wifi.p2p.WifiP2pDevice;
 import android.net.wifi.p2p.WifiP2pManager;
 import android.net.wifi.p2p.nsd.WifiP2pDnsSdServiceInfo;
 import android.net.wifi.p2p.nsd.WifiP2pDnsSdServiceRequest;
 import android.net.wifi.p2p.nsd.WifiP2pServiceInfo;
+import android.support.v4.app.TaskStackBuilder;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.NotificationCompat;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.ListViewCompat;
 import android.util.Log;
@@ -18,6 +25,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -61,6 +69,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ProgressDialog progressDialog;
     EditText msg;
     EditText receiver;
+    Peer a[]=new Peer[10];
+    private static  final int uniqueID=54312;
+    NotificationCompat.Builder notification;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -233,14 +245,43 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Log.d("MessageListener", "State changed: " + state);
             }
 
+            public void notify(CharSequence x)
+            {
+                notification=new NotificationCompat.Builder(MainActivity.this);
+               // setContentView(R.layout.activity_main);
+                notification.setSmallIcon(R.drawable.pockets);
+                notification.setTicker("You have received a new message");
+                notification.setWhen(System.currentTimeMillis());
+                notification.setContentTitle("Pockets");
+                notification.setContentText(x);
+                Intent intent=new Intent(MainActivity.this,MainActivity.class);
+                TaskStackBuilder stackBuilder=TaskStackBuilder.create(MainActivity.this);
+                stackBuilder.addParentStack(MainActivity.class);
+                stackBuilder.addNextIntent(intent);
+
+                PendingIntent pi= stackBuilder.getPendingIntent(uniqueID,PendingIntent.FLAG_UPDATE_CURRENT);
+                notification.setContentIntent(pi);
+
+                NotificationManager nm=(NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+                nm.notify(uniqueID,notification.build());
+
+
+            }
+
             @Override
             public void onMessageReceived(long timestamp, UUID origin, String type, byte[] message){
                     String oldmsg="";
                     try {
+
                         rc2 r = new rc2();
                         byte[] decrypted = r.process(message,"-d");
                         String plain = new String(decrypted);
-                        Toast.makeText(mContext, origin + ":\nemessage=" + new String(message), Toast.LENGTH_LONG).show();
+
+
+
+                        notify(new String(decrypted));
+
+                        Toast.makeText(mContext, origin + ":\nemessage=" + new String(decrypted), Toast.LENGTH_LONG).show();
                     }catch(Exception java){
                         Toast.makeText(mContext, "Error while decrypting the cipher text", Toast.LENGTH_LONG).show();
                     }
@@ -281,6 +322,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             //String cipherText = rc2.encrypt(input,"password");
 
+
+
             P2PKitClient.getInstance(mContext).getMessageServices().sendMessage(nodeId, "text/plain", cipherText);
             Toast.makeText(mContext, "Sending message to " + String.valueOf(nodeId), Toast.LENGTH_SHORT).show();
 
@@ -295,10 +338,65 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.sendMessagetoPeers:
+
                 if (nodeList != null){
+                    AlertDialog.Builder builder=new AlertDialog.Builder(MainActivity.this);
+                    View mView=getLayoutInflater().inflate(R.layout.popup,null);
+                    RadioButton opt1=(RadioButton)mView.findViewById(R.id.radioButton);
+                    RadioButton opt2=(RadioButton)mView.findViewById(R.id.radioButton1);
+                    RadioButton opt3=(RadioButton)mView.findViewById(R.id.radioButton2);
+                    RadioButton opt4=(RadioButton)mView.findViewById(R.id.radioButton3);
+
+                    int i=0;
+                    for(Peer nodes: nodeList)
+                    {
+                        a[i]=nodes;
+                        i++;
+
+                    }
+                    opt1.setOnClickListener(new View.OnClickListener(){
+
+                        public void onClick(View view)
+                        {
+                          sendMessage(a[0].getNodeId());
+                        }
+                    });
+                    opt2.setOnClickListener(new View.OnClickListener(){
+
+                        public void onClick(View view)
+                        {
+                            sendMessage(a[1].getNodeId());
+                        }
+                    });
+                    opt3.setOnClickListener(new View.OnClickListener(){
+
+                        public void onClick(View view)
+                        {
+                            sendMessage(a[2].getNodeId());
+                        }
+                    });
+                    opt4.setOnClickListener(new View.OnClickListener(){
+
+                        public void onClick(View view)
+                        {
+                            for (Peer nodes: nodeList) {
+                                sendMessage(nodes.getNodeId());
+                            }
+                        }
+                    });
+                    builder.setView(mView);
+                    AlertDialog dialog=builder.create();
+                    dialog.show();
+
+
+
+
+                    /*
                     for (Peer nodes: nodeList) {
                         sendMessage(nodes.getNodeId());
                     }
+                */
+
                 }
                 break;
         }

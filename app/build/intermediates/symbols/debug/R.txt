@@ -481,8 +481,9 @@ int drawable abc_textfield_search_activated_mtrl_alpha 0x7f02004c
 int drawable abc_textfield_search_default_mtrl_alpha 0x7f02004d
 int drawable abc_textfield_search_material 0x7f02004e
 int drawable abc_vector_test 0x7f02004f
-int drawable notification_template_icon_bg 0x7f020051
+int drawable notification_template_icon_bg 0x7f020052
 int drawable p2pimage 0x7f020050
+int drawable pockets 0x7f020051
 int id action0 0x7f0c005b
 int id action_bar 0x7f0c0045
 int id action_bar_activity_content 0x7f0c0000
@@ -546,6 +547,10 @@ int id peerNodeId 0x7f0c0068
 int id progress_circular 0x7f0c0005
 int id progress_horizontal 0x7f0c0006
 int id radio 0x7f0c003e
+int id radioButton 0x7f0c006a
+int id radioButton1 0x7f0c006b
+int id radioButton2 0x7f0c006c
+int id radioButton3 0x7f0c006d
 int id screen 0x7f0c0015
 int id scrollIndicatorDown 0x7f0c0038
 int id scrollIndicatorUp 0x7f0c0035
@@ -579,6 +584,7 @@ int id tabMode 0x7f0c000b
 int id text 0x7f0c0065
 int id text2 0x7f0c0063
 int id textSpacerNoButtons 0x7f0c0037
+int id textView 0x7f0c0069
 int id time 0x7f0c0061
 int id title 0x7f0c002d
 int id title_template 0x7f0c0032
@@ -629,10 +635,11 @@ int layout notification_template_media 0x7f040020
 int layout notification_template_part_chronometer 0x7f040021
 int layout notification_template_part_time 0x7f040022
 int layout peers_item_row 0x7f040023
-int layout select_dialog_item_material 0x7f040024
-int layout select_dialog_multichoice_material 0x7f040025
-int layout select_dialog_singlechoice_material 0x7f040026
-int layout support_simple_spinner_dropdown_item 0x7f040027
+int layout popup 0x7f040024
+int layout select_dialog_item_material 0x7f040025
+int layout select_dialog_multichoice_material 0x7f040026
+int layout select_dialog_singlechoice_material 0x7f040027
+int layout support_simple_spinner_dropdown_item 0x7f040028
 int mipmap ic_launcher 0x7f030000
 int raw terms_of_service_and_license_agreement 0x7f060000
 int string abc_action_bar_home_description 0x7f070000
