@@ -8,20 +8,20 @@
         "source": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/F:\\P2PDiscovery-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\layout\\abc_activity_chooser_view.xml"
     },
     {
-        "merged": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/F:\\P2PDiscovery-master\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
-        "source": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/F:\\P2PDiscovery-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\layout\\select_dialog_item_material.xml"
-    },
-    {
-        "merged": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
-        "source": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/layout/abc_action_menu_item_layout.xml"
+        "merged": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/F:\\P2PDiscovery-master\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/F:\\P2PDiscovery-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\layout\\abc_popup_menu_item_layout.xml"
     },
     {
         "merged": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/app/build/intermediates/res/merged/debug/layout/notification_template_big_media.xml",
         "source": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/layout/notification_template_big_media.xml"
     },
     {
-        "merged": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/F:\\P2PDiscovery-master\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
-        "source": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/F:\\P2PDiscovery-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\layout\\abc_popup_menu_item_layout.xml"
+        "merged": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
+        "source": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/layout/abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/F:\\P2PDiscovery-master\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
+        "source": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/F:\\P2PDiscovery-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\layout\\select_dialog_item_material.xml"
     },
     {
         "merged": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_header_item_layout.xml",

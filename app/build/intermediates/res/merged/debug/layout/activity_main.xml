@@ -23,19 +23,22 @@
         android:textColor="#fff"
         android:text="My Peers"/>
     <Button
-        android:layout_below="@id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Send Test Message to Peers"
-        android:id="@+id/sendMessagetoPeers"/>
+        android:id="@+id/sendMessagetoPeers"
+        android:layout_below="@+id/peerList"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <android.support.v7.widget.ListViewCompat
         android:visibility="gone"
         android:padding="10dp"
+        android:ems="10"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/peerList"
-        android:layout_below="@id/sendMessagetoPeers"/>
+        android:layout_below="@id/header"/>
 
     <EditText
         android:layout_width="wrap_content"

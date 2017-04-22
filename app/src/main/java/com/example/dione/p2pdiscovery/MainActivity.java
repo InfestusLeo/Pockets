@@ -254,6 +254,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 notification.setWhen(System.currentTimeMillis());
                 notification.setContentTitle("Pockets");
                 notification.setContentText(x);
+                
                 Intent intent=new Intent(MainActivity.this,MainActivity.class);
                 TaskStackBuilder stackBuilder=TaskStackBuilder.create(MainActivity.this);
                 stackBuilder.addParentStack(MainActivity.class);
