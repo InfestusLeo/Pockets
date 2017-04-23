@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/F:\\P2PDiscovery-master\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_edittext.xml",
-        "source": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/F:\\P2PDiscovery-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\color\\abc_tint_edittext.xml"
-    },
-    {
         "merged": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/app/build/intermediates/res/merged/debug/color/abc_tint_edittext.xml",
         "source": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/color/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/F:\\P2PDiscovery-master\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_edittext.xml",
+        "source": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/F:\\P2PDiscovery-master\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\color\\abc_tint_edittext.xml"
     },
     {
         "merged": "/Users/Electrostatic_10/AndroidStudioProjects/Pockets/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",

@@ -72,6 +72,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Peer a[]=new Peer[10];
     private static  final int uniqueID=54312;
     NotificationCompat.Builder notification;
+    int flag=0;
+    String oldmsg="";
+
 
 
     @Override
@@ -248,7 +251,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void notify(CharSequence x)
             {
                 notification=new NotificationCompat.Builder(MainActivity.this);
-               // setContentView(R.layout.activity_main);
+               //setContentView(R.layout.activity_main);
                 notification.setSmallIcon(R.drawable.pockets);
                 notification.setTicker("You have received a new message");
                 notification.setWhen(System.currentTimeMillis());
@@ -268,22 +271,49 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
             }
+            public void relay(UUID origin,byte[] message) {
+                if (nodeList != null) {
+
+
+                    if(flag==0) {
+                        for (Peer peer : nodeList) {
+                            sendMessage(peer.getNodeId());
+                            if (peer.getNodeId() == origin) {
+                                flag++;
+
+                                continue;
+                            }
+                        }
+                    }
+
+                }
+            }
 
             @Override
             public void onMessageReceived(long timestamp, UUID origin, String type, byte[] message){
-                    String oldmsg="";
+
                     try {
 
-                        rc2 r = new rc2();
-                        byte[] decrypted = r.process(message,"-d");
-                        String plain = new String(decrypted);
+
+                            rc2 r = new rc2();
+                            byte[] decrypted = r.process(message, "-d");
+                            String plain = new String(decrypted);
 
 
 
-                        notify(new String(decrypted));
 
-                        Toast.makeText(mContext, origin + ":\nemessage=" + new String(decrypted), Toast.LENGTH_LONG).show();
-                    }catch(Exception java){
+                            notify(new String(decrypted));
+
+                            Toast.makeText(mContext, origin + ":\nemessage=" + new String(decrypted), Toast.LENGTH_LONG).show();
+
+                            //relay(origin,decrypted);
+
+
+
+
+
+                    }
+                    catch(Exception java){
                         Toast.makeText(mContext, "Error while decrypting the cipher text", Toast.LENGTH_LONG).show();
                     }
 
